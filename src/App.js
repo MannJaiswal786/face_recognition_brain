@@ -30,7 +30,7 @@ onButtonSubmit = () => {
   this.setState({imageUrl: this.state.input});
   app.models
   .predict(Clarifai.FACE_DETECT_MODEL,
-  "https://samples.clarifai.com/face-det.jpg")
+  this.state.input)
   .then(
 function(response){
   console.log(response);
